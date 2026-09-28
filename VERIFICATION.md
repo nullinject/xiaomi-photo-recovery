@@ -27,3 +27,10 @@ that dependencies have no vulnerabilities.
 
 No physical Android device was accessed. ADB permissions, cache availability and device-specific recovery were not tested.
 This is a publication-readiness check, not a complete application security audit.
+
+## CI environment correction
+
+The first Linux run exposed a missing `ffmpeg` executable in the runner. The video
+metadata test uses it to generate a synthetic clip. The workflow now installs
+Ubuntu ffmpeg (including ffprobe) before running the unchanged tests. Local
+verification used an environment where both executables were available.

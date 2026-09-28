@@ -36,7 +36,8 @@
 
 - Python 3.11+
 - Pillow
-- `ffprobe`（可选，存在时可提取更多视频元数据）
+- `ffprobe`（运行时可选，存在时可提取更多视频元数据）
+- 完整测试需要 `ffmpeg` 和 `ffprobe`；macOS 可用 `brew install ffmpeg`，Ubuntu 可用 `sudo apt-get install ffmpeg`。
 - `adb`（使用 from-adb 命令时需要）
 
 ## 安装
